@@ -1,4 +1,4 @@
 science-expo-site
 =================
 
-files for Science Expo website
+Files for Science Expo website.
