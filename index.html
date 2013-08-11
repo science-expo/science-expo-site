@@ -1,26 +1,32 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Science Expo</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Science Expo">
+	<meta name="author" content="River Jiang, Edward Kim, Kevin Zhou">
+	<meta name="keywords" content="science expo, science, expo, sci ex, sci, conference, meristem, stem, steam , technology, engineering, arts, math"/>
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/master.css" type="text/css" media="screen">
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/master.js"></script>
-	<script type="text/javascript" src="js/blur.min.js"></script>	
+	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>	
+	<script type="text/javascript" src="js/blur.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>	
 
 	<!--Blurring and Scrolling Code-->
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$('.big-btn').blurjs({
+			$('blur').blurjs({
 				source: 'body',
 				draggable: false,
 				overlay: 'rgba(0,0,0,0.1)',
 				cache: true,
-				radius:20
+				radius: 20,
 			});
 		});
 
@@ -49,29 +55,32 @@
 	<nav>
 		<h1><a href="http://science-expo.org">Science Expo</a></h1>
 		<ul>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">News</a></li>
-			<li><a href="#">Programs</a></li>
-			<li><a href="#">Media</a></li>
-			<li><a href="#">Sponsors/Affiliates</a></li>
-			<li><a href="#">Story Spotlight</a></li>
-			<li><a href="#">Contact</a></li>
+			<li><a href="#header">Home</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#newsfeed">Newsfeed</a></li>
+			<li><a href="#programs">Programs</a></li>
+			<li><a href="#media">Media</a></li>
+			<li><a href="#sponsors">Sponsors/Affiliates</a></li>
+			<li><a href="#story">Story Spotlight</a></li>
+			<li><a href="#contact">Contact</a></li>
 		</ul>
 	</nav>
 </div>
 
 <div class="container">
 
-<div id="header" class="row">
-	<div class="col-12">
-		<h1>Welcome to Science Expo</h1>
-		<p>We connect students to STEM</p>
-		<div class="big-btn"><a class="btn" href="#">See How</a></div>
+
+<div class="blur">
+	<div id="header" class="row">
+		<div class="col-12">
+			<h1>Welcome to Science Expo</h1>
+			<p>We connect students to STEM</p>
+			<div class="big-btn"><a class="btn" href="#">See How</a></div>
+		</div>
 	</div>
 </div>
 
-<div class="row white-bar">
+<div class="row white-bar" id="about">
 	<div class="col-12">
 		<h2><strong>Youth Empowerment</strong> Through Connections</h2>
 	</div>
@@ -98,7 +107,7 @@
 	</div>
 </div>
 
-<div class="row white-bar">
+<div class="row white-bar" id="newsfeed">
 	<div class="col-12">
 		<h2><strong>Newsfeed</strong> The Latest on Science Expo</h2>
 	</div>
@@ -134,7 +143,7 @@
 		</div></div>
 </div>
 
-<div class="row white-bar">
+<div class="row white-bar" id="programs">
 	<div class="col-12">
 		<h2><strong>Programs</strong> The Awesome Stuff</h2>
 	</div>
