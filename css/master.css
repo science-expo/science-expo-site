@@ -3,15 +3,51 @@
 
 @import url(http://fonts.googleapis.com/css?family=Maven+Pro:400,500,700);
 @import url(http://fonts.googleapis.com/css?family=Oxygen:400,300);
-@font-face {font-family: "MavenProLight"; src: url(../fonts/MavenProLight-300.otf) format("opentype");
+@font-face {font-family: "MavenProLight"; src: url(../fonts/MavenProLight-200.otf) format("opentype");
 }
 
 body {
-	min-width: 780px;
+	width: 100%;
 }
 
-.blur {
-	color: black;
+.center {
+	margin: auto;
+	width: 100px;
+	text-align: center;
+}
+
+a:hover, a:active {
+	text-decoration: none;
+}
+
+.button {
+	font-family: "Oxygen";
+	font-weight: 300;
+	font-size: 20px;
+	padding: 5px 0px 5px 0px;
+	width: 100px;
+	border: 2px solid #fff;
+	color: #00b6f9;
+	text-decoration: none;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.button:hover,
+.button:active {
+	font-size: 20px;
+	color: #00b6f9;
+	background: #fff;
+	text-decoration: none;
+}
+
+#footer .button {
+	margin: 0px 0px 150px 0px;
+}
+
+.row {
+	margin: 0px -100px 0px -100px;
+	z-index: 49;
 }
 
 #science-expo-org {
@@ -31,17 +67,22 @@ body {
 	font-family: "Maven Pro", sans-serif;
 	font-size: 14px;
 	position: fixed;
-	background: rgba(255, 255, 255, 0.95);
 	z-index: 20;
 	width: 100%;
-	margin: 0em 0em 0em 0em;
+	margin: -5px 0em 0em 0em;
 	box-sizing: border-box;
 	padding: 0em 4em 0em 4em;
+	background-color: white;
+	opacity: .97;
+}
+
+#nav .strong{
+	color: #00b6f9;
 }
 
 #nav h1 {
 	width: 112px;
-	height: 50px;
+	height: 45px;
 	text-indent: -9999px;
 	float: left;
 	margin-right: 20px;
@@ -50,6 +91,7 @@ body {
 /*Move logo up*/
 #nav h1 a {
 	display: block;
+	top: -5px;
 	width: 112px;
 	height: 50px;
 	background: url(../img/nav-logo.png) top left no-repeat;
@@ -65,7 +107,7 @@ body {
 #nav ul li a {
 	color: #aaa;
 	display: block;
-	height: 80px;
+	height: 75px;
 	padding: 2.4em 1em 0.5em 1em;
 	box-sizing: border-box;
 }
@@ -78,6 +120,8 @@ body {
 #header {
 	background: #333 url(../img/top1.png) center center no-repeat;
 	background-size: 100%;
+	background-attachment: fixed;
+	background-position: top center;
 	height: 10em;
 	font-family: "MavenProLight", sans-serif;
 	font-weight: 300;
@@ -86,180 +130,268 @@ body {
 	color: #fff;
 }
 #header .col-12 {
-	font-family: "Maven Pro";
-	font-weight: 300;
+	font-weight: 200;
+	font-family: "MavenProLight", sans-serif;
 	box-sizing: border-box;
 	padding: 0 10em;
 }
 #header h1 {
-	font-weight: 400;
-	font-family: "Maven Pro", sans-serif;
+	font-weight: 200;
+	font-family: "MavenProLight", sans-serif;
+	margin-bottom: 0.5em;
+	font-size: 60px;
+	line-height: 1em;
+}
+#header h2 {
+	font-weight: 200;
+	font-family: "MavenProLight", sans-serif;
 	margin-bottom: 0.5em;
 	font-size: 60px;
 	line-height: 1em;
 }
 #header p {
+	font-weight: 200;
+	font-family: "MavenProLight", sans-serif;
 	font-size: 24px;
 	line-height: 1em;
-}
-.big-btn a {
-	font-family: "Maven Pro";
-	font-weight: 300;
-	font-size: 20px;
-	padding: 10px 20px;
-	margin: 1em;
-	background: rgba(50,50,50,0.9);
 }
 
 /*Change grey font to Maven*/
 .white-bar {
-	font: 300 40px/1em "Maven Pro", sans-serif;
-	font-family: "Maven Pro";
-	font-weight: 300;
+	font: 200 40px/1em "MavenProLight", sans-serif;
+	font-weight: 200;
+	font-family: "MavenProLight", sans-serif;
 	color: #ccc;
 	box-sizing: border-box;
 	padding: 1.5em 10%;
 	text-align: center;
+	z-index: 50;
 }
 .white-bar strong {
 	color: #00b6f9;
 	font-family: "Maven Pro";
 	font-weight: 300;
+	z-index: 50;
 }
 
-#features {
-}
 #features .feature {
-	height: 355px;
-	background-position: center center;
+	height: 300px;
+	background-position: top center;
 	background-repeat: no-repeat;
 	box-sizing: border-box;
-	padding: 8em 10em;
+	padding: 6em 10em;
 	text-align: center;
-	color: #fff;
+	color: #00b6f9;
 	font-family: "Maven Pro", sans-serif;
 }
 #features .feature h3 {
 	font-size: 60px;
-	font-family: "Maven Pro", sans-serif;
-	font-weight: 300;
+	font-weight: 200;
+	font-family: "MavenProLight", sans-serif;
 	line-height: 1em;
 }
 #features .feature p {
 	font-size: 30px;
 	font-family: "Oxygen";
-	font-weight: "300";
+	font-weight: 300;
+	font-style: normal;
+	color: white;
+	font-size: 23px;
 }
 #features .feature#enrich {
 	background-image: url(../img/sec1-1.png);
+	background-color: black;
+	background-attachment: fixed;
+	background-position: center center;
 }
 #features .feature#empower {
 	background-image: url(../img/sec1-2.png);
+	background-color: black;
+	background-attachment: fixed;
+	background-position: center center;
 }
 #features .feature#explore {
 	background-image: url(../img/sec1-3.png);
+	background-color: black;
+	background-attachment: fixed;
+	background-position: center center;
 }
 
 #about-us {
-	font: 400 20px/1.5em "Oxygen", sans-serif;
-	color: #eee;
-	background: #aaa;
+	font: 300 18px/1.3em "Oxygen", sans-serif;
+	color: white;
+	background-image: url(../img/sec1-3-blur.png);
+	background-color: black;
+	background-attachment: fixed;
+	background-position: center center;
 	box-sizing: border-box;
-	padding: 2em 10%;
+	padding: 2em 14.2%;
+	text-align: center;
 }
 
 #news {
 	background: #eee;
-	padding: 65px 0;
-	color: #888;
-	font: 400 18px/1.3em "Oxygen", sans-serif;
-	font-weight: 300
+	padding: 1em 0;
+	color: white;
+	font: 300 18px/1.3em "Oxygen", sans-serif;
+	font-weight: 300;
+	background-color: #EDEDED;
+	width: 100%;
 }
 #news .header {
 	background: #fff;
 	padding: 2em 10%;
 	box-sizing: border-box;
 	text-align: center;
-	font: 400 30px/1em "Maven Pro", sans-serif;
+	font: 400 24px/1em "Maven Pro", sans-serif;
 	color: #ccc;
 	margin-bottom: 45px;
 }
 #news .header strong {
 	color: #00b6f9;
+	font: 400 24px/1em "Maven Pro", sans-serif;
 }
 #news .news {
 	box-sizing: border-box;
-	padding: 0.5em 10%;
+	padding: 0.5em 15.3%;
+	width: 100%;
 }
 #news .news .col-12 {
 	background: #fff;
-	padding: 2em;
+	padding: .25em 2em;
+	background: gray;
+	background-attachment: fixed;
 }
 #news .news .date {
-	color: #ccc;
+	font: 300 18px/1.3em "Oxygen", sans-serif;
+	opacity: .7;
+}
+
+.accordion {
+	background-color: black;
+	color: gray;
+	font-family: "MavenProlight";
+	font-weight: 200;
+	text-align: center;
+	width: 100%;
+}
+.accordion-inner {
+	padding: 0px;
+	margin: 0px;
+}
+.accordion-toggle {
+	background-color: black;
+	color: gray;
+	font-family: "MavenProlight";
+	font-weight: 200;
+	text-align: center;
+	margin: 0px;
+	padding: 2px 0px 2px 0px;
+	font-size: 24px;
+	background: url(../img/programs-blur.png) top left no-repeat;
+	background-attachment: fixed;
+	width: 100%;
+}
+.accordion-toggle:hover {
+	background-color: black;
+	text-decoration: none;
+	border: none;
 }
 
 #programs .program {
-	background: #000;
+	background: black;
 	position: relative;
 	margin:0;
-	padding:0;
+	width: 100%;
+	height: 300px;
 }
 #programs .program h3 {
+	font-weight: 200;
+	font-family: "MavenProLight", sans-serif;
 	margin: 0;
 }
 #programs .program a {
 	background-position: center center;
 	background-repeat: no-repeat;
 	text-align: center;
-	padding: 140px 0;
-	font: 400 30px/1em "Maven Pro", sans-serif;
-	color: #fff;
+	padding: 150px 0px;
+	font-size: 40px;
+	font: 200 30px/.1em "MavenProlight", sans-serif;
+	color: #00b6f9;
 	display: block;
-	width: 100%; height: 40px;
+	width: 100%;
+	height: 40px;
+	background-attachment: fixed;
+	background-position: center center;
+}
+#programs .program p {
+	color: white;
+	text-align: center;
+	font-size: 18px;
+	margin: 35px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
 }
 #programs .program a:hover {
-	opacity: 0.75;
+	opacity: 0.9;
 	text-decoration: none;
 }
 #programs .program.col-6 {
 	margin: 0;
 	padding-right: 0;
 	padding-left: 0;
+	width: 50%;
+	float: left;
 }
 #programs .program#conference a {
+	font-size: 40px;
 	background-image: url(../img/conference.png);
 }
-#programs .program#meristem a {
-	background-image: url(../img/meristem.png);
+#programs .program#ambassadors a {
+	font-size: 40px;
+	background-image: url(../img/ambassadors.png);
+}
+#programs .program#mentorship a {
+	font-size: 40px;
+	background-image: url(../img/mentorship.png);
 }
 #programs .program#outreach a {
+	font-size: 40px;
 	background-image: url(../img/outreach.png);
 }
-#programs .program#expotential a {
-	background-image: url(../img/expotential.png);
+
+#footer h3 {
+	font-weight: 200;
+	font-family: "MavenProLight", sans-serif;
+	padding: 200px 0 0 0;
+	color: #fff;
+	font: 200 50px/1em "MavenProlight", sans-serif;
 }
 
+.social {
+	opacity: .8;
+}
+.facebook:hover {opacity: .8;} .twitter:hover {opacity: .8;} .google:hover {opacity: .8;} .linkedin:hover {opacity: .8;} .newsletter:hover {opacity: .8;}
+
+}
+.footer .small p {
+	color: white;
+	opacity: .8;
+}
 #footer {
+	background-size: 100%;
 	font-family: "Oxygen";
 	font-size: 14px;
 	text-align: center;
 	box-sizing: border-box;
 	padding: 2em 10%;
 	color: #ccc;
-	background: #f5f5f5 url('../img/footer.png') no-repeat center top;
+	background: black url('../img/footer.png') no-repeat center top;
+	background-attachment: fixed;
+	background-position: bottom center;
 }
-#footer h3 {
-	padding: 200px 0 0 0;
-	color: #fff;
-	font: 500 50px/1em "Maven Pro", sans-serif;
-}
-#footer .big-btn {
-	padding-bottom: 150px;
-}
+#footer a {
 
-@media (max-width: 768px) {
-#science-expo-org {
-	padding: 0;
 }
+#footer a:hover {
+	text-decoration: none;
 }
